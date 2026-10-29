@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f7f2" />
+    <meta name="description" content="Apply to explore opportunities with Nexova Solutions. Tell our people team about your experience and the kind of role you are looking for." />
+    <title>Explore opportunities — Nexova Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { ink: "#152b2b", forest: "#174e45", mint: "#d8eee5", lime: "#c8ed69", paper: "#f7f7f2", muted: "#5d6b68" },
+            fontFamily: { sans: ["DM Sans", "sans-serif"], display: ["Manrope", "sans-serif"] },
+          },
+        },
+      };
+    </script>
+    <script src="./validation.js" defer></script>
+  </head>
+  <body class="min-h-screen bg-paper font-sans text-ink antialiased">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-lime focus:px-5 focus:py-3 focus:font-bold">Skip to form</a>
+    <header class="border-b border-ink/10 bg-white">
+      <div class="mx-auto flex max-w-5xl items-center justify-between px-5 py-4 sm:px-8">
+        <a class="flex items-center gap-3" href="./index.html" aria-label="Nexova Solutions home">
+          <span class="grid h-10 w-10 place-items-center rounded-xl bg-forest text-lime" aria-hidden="true"><svg viewBox="0 0 32 32" class="h-6 w-6" fill="none"><path d="M7 24V8l18 16V8" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="25" cy="8" r="3" fill="currentColor"/></svg></span>
+          <span class="font-display text-lg font-extrabold tracking-tight">nexova<span class="text-forest">.</span></span>
+        </a>
+        <a class="text-sm font-bold text-forest hover:text-ink" href="./index.html">← Back to Nexova</a>
+      </div>
+    </header>
+
+    <main id="main-content" class="mx-auto max-w-5xl px-5 py-10 sm:px-8 sm:py-14">
+      <div class="mx-auto max-w-3xl">
+        <p class="text-xs font-bold uppercase tracking-[.18em] text-forest">Your next chapter</p>
+        <h1 class="mt-3 font-display text-3xl font-extrabold leading-tight tracking-[-.035em] sm:text-4xl">Tell us what you’re looking for.</h1>
+        <p class="mt-4 max-w-2xl leading-7 text-muted">Tell us how to reach you and what kind of opportunity interests you. A Nexova team member can follow up about relevant recruitment opportunities. This prototype does not send or store your details.</p>
+
+        <form id="application-form" class="mt-8 space-y-7 rounded-3xl border border-ink/10 bg-white p-5 shadow-[0_22px_70px_rgba(21,43,43,.07)] sm:mt-10 sm:p-8 lg:p-10" novalidate>
+          <div id="form-status" class="hidden rounded-2xl border px-4 py-4 text-sm font-semibold" role="status" aria-live="polite" tabindex="-1"></div>
+          <div id="form-error-summary" class="hidden rounded-2xl border border-red-300 bg-red-50 px-4 py-4 text-sm text-red-900" role="alert" aria-live="assertive" tabindex="-1">
+            <p class="font-bold">Please check the highlighted fields:</p>
+            <ul id="form-error-list" class="mt-2 list-inside list-disc space-y-1"></ul>
+          </div>
+
+          <fieldset class="space-y-5">
+            <legend class="mb-1 font-display text-xl font-extrabold">Contact details</legend>
+            <p class="-mt-2 text-sm text-muted">Only the details needed to respond to your expression of interest.</p>
+            <div class="grid gap-5 sm:grid-cols-2">
+              <div>
+                <label for="full-name" class="mb-2 block text-sm font-bold">Full name <span class="text-red-700" aria-hidden="true">*</span></label>
+                <input id="full-name" name="fullName" type="text" autocomplete="name" required minlength="2" maxlength="100" aria-describedby="full-name-error" class="form-control w-full rounded-xl border border-ink/15 bg-paper px-4 py-3.5 text-base outline-none transition placeholder:text-muted focus:border-forest focus:ring-4 focus:ring-forest/10" placeholder="Your full name" />
+                <p id="full-name-error" class="field-error mt-2 hidden text-sm font-semibold text-red-700" aria-live="polite" aria-atomic="true"></p>
+              </div>
+              <div>
+                <label for="email" class="mb-2 block text-sm font-bold">Email address <span class="text-red-700" aria-hidden="true">*</span></label>
+                <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required maxlength="254" aria-describedby="email-error" class="form-control w-full rounded-xl border border-ink/15 bg-paper px-4 py-3.5 text-base outline-none transition placeholder:text-muted focus:border-forest focus:ring-4 focus:ring-forest/10" placeholder="you@example.com" />
+                <p id="email-error" class="field-error mt-2 hidden text-sm font-semibold text-red-700" aria-live="polite" aria-atomic="true"></p>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="space-y-5 border-t border-ink/10 pt-6">
+            <legend class="mb-1 font-display text-xl font-extrabold">Opportunity</legend>
+            <p class="-mt-2 text-sm text-muted">Choose the broad area that best matches your interest.</p>
+            <div class="grid gap-5 sm:grid-cols-2">
+              <div>
+                <label for="role" class="mb-2 block text-sm font-bold">Area of interest <span class="text-red-700" aria-hidden="true">*</span></label>
+                <select id="role" name="role" required aria-describedby="role-error" class="form-control w-full rounded-xl border border-ink/15 bg-paper px-4 py-3.5 text-base text-ink outline-none transition focus:border-forest focus:ring-4 focus:ring-forest/10">
+                  <option value="" selected disabled>Select an area</option>
+                  <option value="executive-mid-management">Executive or mid-management roles</option>
+                  <option value="customer-support">Customer-support roles</option>
+                  <option value="other">Other / open to discussion</option>
+                </select>
+                <p id="role-error" class="field-error mt-2 hidden text-sm font-semibold text-red-700" aria-live="polite" aria-atomic="true"></p>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="border-t border-ink/10 pt-6">
+            <legend class="mb-4 font-display text-xl font-extrabold">Demo acknowledgement</legend>
+            <div>
+              <div class="flex items-start gap-3">
+                <input id="demo-acknowledgement" name="demoAcknowledgement" type="checkbox" required aria-describedby="demo-acknowledgement-hint demo-acknowledgement-error" class="mt-1 h-5 w-5 shrink-0 rounded border-ink/30 text-forest accent-forest focus:ring-4 focus:ring-forest/15" />
+                <label for="demo-acknowledgement" class="text-sm leading-6 text-muted">I understand this prototype does not send or store the information I enter. <span class="font-bold text-red-700" aria-hidden="true">*</span></label>
+              </div>
+              <p id="demo-acknowledgement-hint" class="ml-8 mt-2 text-xs text-muted">Please do not enter real personal or candidate data.</p>
+              <p id="demo-acknowledgement-error" class="field-error ml-8 mt-2 hidden text-sm font-semibold text-red-700" aria-live="polite" aria-atomic="true"></p>
+            </div>
+          </fieldset>
+
+          <div class="flex flex-col-reverse gap-3 border-t border-ink/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
+            <p class="text-xs leading-5 text-muted">Fields marked <span class="font-bold text-red-700">*</span> are required.</p>
+            <div class="flex flex-col gap-3 sm:flex-row">
+              <button id="clear-form" type="reset" class="inline-flex min-h-12 items-center justify-center rounded-full border border-ink/20 bg-white px-6 py-3 text-sm font-bold text-ink transition hover:bg-paper focus:outline-none focus:ring-4 focus:ring-ink/10">Clear form</button>
+              <button type="submit" class="inline-flex min-h-12 items-center justify-center rounded-full bg-forest px-7 py-3 text-sm font-bold text-white transition hover:bg-ink focus:outline-none focus:ring-4 focus:ring-forest/20">Submit application <span class="ml-3" aria-hidden="true">↗</span></button>
+            </div>
+          </div>
+        </form>
+        <p class="mx-auto mt-6 max-w-3xl text-center text-xs leading-5 text-muted">This page is a prototype. Connect it to an approved, secure Nexova workflow and publish an appropriate privacy notice before collecting real application data.</p>
+      </div>
+    </main>
+
+    <footer class="border-t border-ink/10 bg-white px-5 py-6 text-center text-xs text-muted sm:px-8">
+      <p>© <span id="year">2026</span> Nexova Solutions · <a href="./index.html" class="font-semibold text-forest hover:text-ink">Company website</a></p>
+    </footer>
+  </body>
+</html>
